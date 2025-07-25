@@ -1,4 +1,4 @@
-require('./config/ensure-uploads');
+require('./ensure-uploads');
 
 
 module.exports = ({ env }) => ({
