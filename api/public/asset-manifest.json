@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.06b6d6e8.css",
+    "main.js": "/static/js/main.73e278a7.js",
+    "static/media/walmart.png": "/static/media/walmart.820ca515bfb7e355a922.png",
+    "static/media/banner-img.png": "/static/media/banner-img.0412d66280a0273effa2.png",
+    "static/media/flipkart.png": "/static/media/flipkart.640c48e53af86bd8c4b8.png",
+    "static/media/newsletter-bg.jpeg": "/static/media/newsletter-bg.b6f22313149bdbb35069.jpeg",
+    "static/media/headphone-prod-1.webp": "/static/media/headphone-prod-1.49810a1a193aa5efb36b.webp",
+    "static/media/speaker.png": "/static/media/speaker.4bcdebacf2f12675036c.png",
+    "static/media/alibaba.png": "/static/media/alibaba.94572c4bf613b4fd3657.png",
+    "static/media/ebay.png": "/static/media/ebay.235da63ff20313378d15.png",
+    "static/media/earbuds-prod-1.webp": "/static/media/earbuds-prod-1.8a82669f0f771bfe5709.webp",
+    "static/media/amazon.png": "/static/media/amazon.9f09610456626df2d140.png",
+    "static/media/headphones.png": "/static/media/headphones.96660e90bb9b7697d1f1.png",
+    "static/media/projector.png": "/static/media/projector.5cc3c75b2193c0d51dd2.png",
+    "static/media/OverHeadPhone.png": "/static/media/OverHeadPhone.aa5b60527929d558d402.png",
+    "index.html": "/index.html",
+    "main.06b6d6e8.css.map": "/static/css/main.06b6d6e8.css.map",
+    "main.73e278a7.js.map": "/static/js/main.73e278a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06b6d6e8.css",
+    "static/js/main.73e278a7.js"
+  ]
+}
