@@ -1,175 +1,192 @@
 @import "../../css-config/mixins.scss";
 
+.hero {
+  background-image: linear-gradient(to right, #Be2de2, #4a00e0);
+  padding: 80px 20px;
+  width: 100%;
+  overflow: hidden;
+}
 
-    .hero {
-      // height: fit-content;
-      background-image: linear-gradient(to right, #Be2de2, #4a00e0);
-      padding: 100px;
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-      
-    }
-   
-  
-    .timeline{
-      position: relative;
-      max-width: 1200px;
-      
-      // margin: 50px auto;
-    }
-    .round-wdth{
-      width: 100%;
-      height: 10px;
-      display: flex;
-      // height: 10px;
-      justify-content: center;
-      align-items: center;
-    }
-    .round{
-      width: 10px;
-      background-color: #fff;
-      height: 100%;
-      border-radius: 50%;
-      @include md{
-        width: 100%;
-      }
-    }
-    .container{
-      padding: 10px 50px;
-      position: relative;
-      width: 50%;
-      /* background: rgba(0, 0, 0, 0.3); */
-  
-    }
-    .textbox{
-       padding: 20px 30px;
-       background: #fff;
-       color: #111;
-       position: relative;
-       background-color: rgb(244, 238, 247);
-       border-radius: 6px;
-       font-size: 15px;
-    }
-    .left-container{
-      left: 0;
-  
-    }
-    .right-container{
-      left: 50%;
-      
-    }
-    .right-container img{
-      left: -20px;
-  
-    }
-  
-    .container img{
-      width: 30px;
-      position: absolute;
-      border-radius: 50%;
-      right: -20px;
-      top: 32px;
-      z-index: 3;
-      @include md{
-        width: 40px;
-      }
-    }
-    #flip{
-      width: 40px;
-      @include md{
-        width: 50px;
-      }
-    }
-  
-  
-  
-    .timeline::after{
-      content: '';
-      position: absolute;
-      width: 4px;
-      height: 100%;
-      background: #fff;
-      opacity: 0.5;
-      top: 0;
-      left: 50%;
-      margin-left: -3px;
-      /* z-index: ; */
-      animation: moveline 6s linear forwards;
-      @include md{
-            height:  3px;
-      }
-  
-    }
-  
-    @keyframes moveline {
-      0%{
-        height: 0;
-  
-      }
-      100%{
-        height: 100%;
-      }
-    }
-  
-    
-    .textbox h2{
-      font-weight: 600;
-  
-    }
-    .textbox small{
-      display: inline-block;
-      margin-bottom: 15px;
-    }
-    .left-container-arrow{
-      height: 0;
-      width: 0;
-      position: absolute;
-      top: 28px;
-      z-index: 1;
-      border-top: 15px solid transparent;
-      border-bottom: 15px solid transparent;
-      border-left: 15px solid #fff;
-      right:-15px;
-  
-    }
-    .right-container-arrow{
-      height: 0;
-      width: 0;
-      position: absolute;
-      top: 28px;
-      z-index: 1;
-      border-top: 15px solid transparent;
-      border-bottom: 15px solid transparent;
-      border-right: 15px solid #fff;
-      left:-15px;
-  
-    }
-    @media screen and (max-width: 600px){
-      .hero{
-          padding: 1px 0%;
-      }
-      .conatainer{
-          padding: 10px 18px
-      }
-      .textbox{
-          padding: 5px 5px;
-      }
-      .container img{
-          width: 30px;
-      }
+.round-wdth {
+  width: 100%;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.round {
+  width: 10px;
+  background-color: #fff;
+  height: 100%;
+  border-radius: 50%;
+
+  @include md {
+    width: 100%;
   }
-    @media screen and (max-width: 440px){
-      .hero{
-          padding: 1px 0%;
-      }
-      .container{
-          padding: 7px 30px
-      }
-      .textbox{
-          padding: 5px 5px;
-      }
-      .container img{
-          width: 35px;
-      }
-   
+}
+
+.container {
+  padding: 10px 20px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+
+  @include md {
+    width: 100%;
+    padding: 10px 15px;
   }
-    
+}
+
+.textbox {
+  padding: 20px;
+  background-color: rgb(244, 238, 247);
+  color: #111;
+  border-radius: 6px;
+  font-size: 15px;
+  position: relative;
+
+  @include sm {
+    padding: 10px;
+  }
+}
+
+.left-container {
+  left: 0;
+}
+
+.right-container {
+  left: 50%;
+
+  @include md {
+    left: 0;
+  }
+}
+
+.container img {
+  width: 30px;
+  position: absolute;
+  border-radius: 50%;
+  right: -20px;
+  top: 32px;
+  z-index: 3;
+
+  @include md {
+    width: 40px;
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 10px auto;
+    display: block;
+  }
+}
+
+#flip {
+  width: 40px;
+
+  @include md {
+    width: 50px;
+  }
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: #fff;
+  opacity: 0.5;
+  top: 0;
+  left: 50%;
+  margin-left: -2px;
+  animation: moveline 6s linear forwards;
+
+  @include md {
+    height: 3px;
+    width: 100%;
+    left: 0;
+    top: auto;
+    bottom: 0;
+    margin: 0;
+  }
+}
+
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.textbox h2 {
+  font-weight: 600;
+}
+
+.textbox small {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.left-container-arrow,
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+}
+
+.left-container-arrow {
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #fff;
+  right: -15px;
+
+  @include md {
+    display: none;
+  }
+}
+
+.right-container-arrow {
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #fff;
+  left: -15px;
+
+  @include md {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    padding: 60px 10px;
+  }
+
+  .textbox {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .hero {
+    padding: 40px 5px;
+  }
+
+  .textbox {
+    padding: 8px;
+  }
+
+  .container img {
+    width: 30px;
+  }
+}

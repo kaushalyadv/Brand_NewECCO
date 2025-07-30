@@ -1,109 +1,125 @@
 @import "../../../css-config/mixins.scss";
 
-.hero-banner{
-    padding: 40px 0;
-    position: relative;
-    background-image: linear-gradient(90deg,#283048,#859398);
-    @include md{
-        height: calc(100vh - 80px); 
-    }
-    .content{
-        height: 100%;
-        display: flex;
-        justify-content: flex-end;
-        // flex end:-  so the headphone will move to right end;
-        align-items: center;
-        align-items: center;   
-        flex-direction: column-reverse;
-        max-width: calc(100% - 20px);
-        margin: 0 auto;
-        position: relative;
-          @include md{
-               flex-direction: row;
-               max-width: 1200px;
-          }
-          
-        .banner-img{
-           position: relative;
-           z-index: 2;
-           width: 200px;
-           margin-bottom: 20px;
-           @include md{
-            width: 400px;
-            margin-right: 60px;
-            margin-top: 50px;
-            margin-bottom: 30px;
-           }       
-           @include xxl{
-            width: 500px;
-            margin-right: 0px;
-            margin-top: 0px;
-            // margin-left: 80px;
-           }       
-        }
-    
-        .text-content{
-            color: white;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        
-        @include md{
-            position: absolute;
-            left: 50px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        @include xxl{
-            left: 0;
-        }
-        h1{
-            font-size: 80px;
-            font-weight: 700;
-            line-height: 1;
-            margin-bottom: 20px;
-            @include md{
-                font-size: 100px;
-            }
-        }
-        p{
-            max-width: 300px;
-            font-size: 14px;
-            line-height: 20px;
-            margin-bottom: 20px;
-            @include md{
-                max-width: 500px;
-                font-size: 22px;
-                line-height: 24px;
-                margin-bottom: 40px;
-            }
-        }
-    }
-        .ctas{
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            .banner-cta{
-                text-transform: uppercase;
-                font-size: 13px;
-                font-weight: 500;
-                // width: fit-content;
-                border: 2px solid white;
-                padding: 10px 20px;
-                cursor: pointer;
-                @include md{
-                    padding: 18px 35px;
-                }
-                &.v2{
-                    background-color: white;
-                    color: black;
-                }
-                &:hover{
-                    opacity: 0.6;
-                }
-            }
-        }
+.hero-banner {
+  padding: 40px 0;
+  position: relative;
+  background-image: linear-gradient(90deg, #283048, #859398);
 
+  @include md {
+    height: calc(100vh - 80px);
+  }
+
+  .content {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column-reverse;
+    max-width: calc(100% - 20px);
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    padding: 0 10px;
+
+    @include md {
+      flex-direction: row;
+      max-width: 1200px;
+      text-align: left;
+      padding: 0;
     }
+
+    .banner-img {
+      position: relative;
+      z-index: 2;
+      width: 200px;
+      margin-bottom: 20px;
+
+      @include md {
+        width: 400px;
+        margin-right: 60px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+
+      @include xxl {
+        width: 500px;
+        margin-right: 0;
+        margin-top: 0;
+      }
+    }
+
+    .text-content {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include md {
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        align-items: flex-start;
+      }
+
+      @include xxl {
+        left: 0;
+      }
+
+      h1 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 20px;
+
+        @include md {
+          font-size: 100px;
+        }
+      }
+
+      p {
+        max-width: 300px;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+
+        @include md {
+          max-width: 500px;
+          font-size: 22px;
+          line-height: 28px;
+          margin-bottom: 40px;
+        }
+      }
+
+      .ctas {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .banner-cta {
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 500;
+          border: 2px solid white;
+          padding: 10px 20px;
+          cursor: pointer;
+          transition: opacity 0.3s;
+
+          @include md {
+            padding: 18px 35px;
+          }
+
+          &.v2 {
+            background-color: white;
+            color: black;
+          }
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
 }

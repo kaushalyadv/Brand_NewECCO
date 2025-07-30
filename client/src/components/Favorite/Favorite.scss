@@ -1,348 +1,289 @@
 @import "../../css-config/mixins.scss";
 
+.fav-products {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  height: fit-content;
+  justify-content: center;
+  background-color: rgba(212, 211, 211, 0.452);
 
-.fav-products{
+  .bigdiv {
     width: 100%;
     display: flex;
+    flex-direction: column;
     box-sizing: border-box;
-
+    align-items: center;
     height: fit-content;
 
-    justify-content: center;
+    .texts {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
 
-    background-color: rgba(212, 211, 211, 0.452);
-    .bigdiv{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-        align-items: center;       
-        height: fit-content;
-        .texts{
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-        
-        
-       .empty-cart{
-        width: 70%;
-        height: 20vh;
-        margin-top: 30%;
-        position: absolute;
+      .empty-cart {
+        width: 90%;
+        max-width: 600px;
+        height: auto;
+        margin: 20vh auto;
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-    
-        @include md{
-        width: 40%;
-        height: 35vh;
-        margin-top: 10%;
-        padding: 8px;
-      
+        padding: 1rem;
+
+        @include md {
+          margin-top: 10vh;
         }
-        
-    
-    .inside-empty{
-        width: 80%;
-        height: 40%;
-        display: flex;
-        padding: 5px;
-        border-radius: 5px;
-    
-    
-        border: 5px solid rgb(195, 193, 193);
-        @include md{
-        width: 95%;
-        height: 45%;
-        padding: 10px;
-     
-        }
-        
-    
-    
-        .inside-box{
+
+        .inside-empty {
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          display: flex;
+          border: 5px solid rgb(195, 193, 193);
+
+          .inside-box {
             width: 18%;
             border-radius: 3px;
             height: 100%;
-            position: relative;
             background-color: #2c4ebd;
-        }
-           
-        .spans{
+          }
+
+          .spans {
             width: 70%;
-            height: 100%;
-            position: relative;
-            // padding: 9px;
-            left: 5%;
-    
-            .spanOne, .spanTwo, .spanThree{
-                display: flex;
-                margin-bottom: 4%;
-                border-radius: 2px;
-                height: 18%;
-                background-color: rgba(120, 120, 120, 0.452);
+            margin-left: 5%;
+
+            .spanOne,
+            .spanTwo,
+            .spanThree {
+              display: flex;
+              margin-bottom: 4%;
+              border-radius: 2px;
+              height: 18%;
+              background-color: rgba(120, 120, 120, 0.452);
             }
-            .spanOne{
-                width: 95%;
+
+            .spanOne {
+              width: 95%;
             }
-            .spanTwo{
-                width: 75%;
+            .spanTwo {
+              width: 75%;
             }
-            .spanThree{
-                width: 55%;
+            .spanThree {
+              width: 55%;
             }
-            }
-        
-            }
-    .imgs{
-    
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        right: 0;
-        display: flex;
-        @include md{
+          }
+        }
+
+        .imgs {
+          position: absolute;
+          right: 0;
+          display: flex;
+          width: 100px;
+          height: 100px;
+
+          @include md {
             width: 150px;
             height: 150px;
-        }
-        
-         #heart{
-           position: relative;
-        //    width: ;
-         }
-         #cursor{
+          }
+
+          #cursor {
             position: absolute;
-             width: 100%;
-             top: 50%;
-             left: 10%;
-            @include md{
-                width: 70%;
-    
-            }
-             
-         }
-         }
-        }
-        .inside-text{
-            position: absolute;
-            bottom: 30%;
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;   
-            // background-color: gray;
-            align-items: center;  
-            @include md{
-                bottom: 10%;
-                width: 35%;
-    
-            } 
-            .header{
-                font-size: 30px;
-                font-weight: 600;
-                margin-bottom: 5%;
-                font-size: 20px;
-                @include md{
-                    font-size: 25px;
-                    font-weight: 500;
-                }
-            }  
-            .bottom{
-               color: gray;
-               font-size: 15px;
-               @include md{
-                font-size: 16px;
-               }
-            }
-        }   
-    
-    
-          
-    }
-        .toptext{
-            margin: 1% ;
-            padding: 2%;
-            font-weight: 700;
             width: 100%;
-            font-size: 18px;
-            color: #373737;
+            top: 50%;
+            left: 10%;
+
+            @include md {
+              width: 70%;
+            }
+          }
         }
-    .parent-design{
-            max-width: 1200px;
-            flex-wrap: wrap;
-            display: flex;
-            width: 100%;
-            margin: 2%;
-            overflow-y: auto;
-            height: 100vh;
-            justify-content: center;
-            background: linear-gradient(#bdc3c7, #2c3e50);
-            align-items: center;
-            @include md{
-                height: fit-content;
 
-                justify-content: flex-start;
-            }
-            
-        .desing-inside{
-            width: 90%;
-            margin: 5% 3%;
-            height: 90%;
-            background-color: rgb(255, 255, 255, 0.5);
-            display: flex;
-            flex-direction: row;
-            border-radius: 5px;
-            // box-shadow: 5px 5px 5px  #fff;
-            @include md{
-                width: 21%;
-                height: 95%;
-            }
-        .cart-product{
-            height: 100%;
-            width: 100%;
-            border-radius: 5px;
-            // display: flex;
-            align-items: center;
-            background-color: rgb(255, 255, 255, 0.5);
-            @include md{
-            padding: 20px;
-            display: block;
-            }
-        }
-        .img-container{
-            width: 100%;
-            height: 30%;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            position: relative;
-            padding: 5%;
-            border-radius: 5px;
-            @include md{
-                height: 200px;
-            }
-            .close-btn{
-                cursor: pointer;
-                width: 100%;
-                img{
-                    width: 20px;
-                    position: absolute;
-                    right: 5px;
-                    top: 5px;
-                    height: 12%;
-                    @include md{
-                        bottom: 5px;
-                        right: 0px;
+        .inside-text {
+          position: absolute;
+          bottom: 10%;
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
 
-                    }
-                }
-            }
-            img{
-                width: 100%;
-                height: 100%;
+          @include md {
+            width: 50%;
+          }
 
-            }
-        }
-        .prod-details{
-            display: flex;
-            height: 100%;
-            @include md{
-                width: 100%;
-            }
-            .prod-details-child{
-                width: 100%;
-                padding: 20px;
-                align-items: center;
-                @include md{
-                    padding: 0px;
-                    flex-direction: column;
-                }
-                .name {
-                    color: #373737;
-                    font-weight: 600;
-                    font-size: 20px;
-                    margin: 0px;
-                    width: 100%;
-                    line-height: 1;
-                    height: 10%;
-                    @include md {
-                      margin: 10px 5px;
-                      font-size: 13px;
-                      height: 6vh;
-                    }
-                  
-                    /* Truncate after 5 words */
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 2; /* Adjust the number of lines to your preference */
-                    -webkit-box-orient: vertical;
-                  }
-                  
-            .price{
-                color: #373737;
-                margin: 5px 10px;
-                font-size: 18px;
-                font-weight: 600;
-                margin: 10px 0px;
-                @include md{
-                    font-size: 13px;
-                }
-                
-            }
-            .line{
-                height: 2px;
-                background-color: rgba(132, 130, 130, 0.452);
-                margin: 10px 0px;
-                width: 100%;
-                display: flex;
-
-                @include md{
-                    height: 1px;
-                    width: 100%;
-                    margin: 10px 0px;
-
-                }
-            }
-            .categories{
-                color: #373737;
-                margin: 10px;
-                font-size: 18px;
-                font-weight: bold;
-                margin: 10px 0px;
-
-                @include md{
-                    font-size: 12px;
-                }
-            }
-            .atb{
-                outline: 0;
-                border: 1px solid green;
-                padding: 5px;
-                margin: 10px 0px;
-                width: 100%;
-                font-weight: 550;
-                cursor: pointer;
-                transition: 0.7s;
-                 @include md{
-                   padding: 10px;
-                 }
-                &:hover{
-                    background-color: rgba(60, 230, 94, 0.765);
-                }
-            }
-            }
-          
-      
-        
-        svg{
+          .header {
             font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5%;
+
+            @include md {
+              font-size: 25px;
+              font-weight: 500;
+            }
+          }
+
+          .bottom {
+            color: gray;
+            font-size: 15px;
+
+            @include md {
+              font-size: 16px;
+            }
+          }
         }
-        }  
+      }
     }
-}
-        
+
+    .toptext {
+      margin: 1%;
+      padding: 2%;
+      font-weight: 700;
+      width: 100%;
+      font-size: 18px;
+      color: #373737;
     }
-    
+
+    .parent-design {
+      max-width: 1200px;
+      flex-wrap: wrap;
+      display: flex;
+      width: 100%;
+      margin: 2%;
+      overflow-y: auto;
+      height: auto;
+      justify-content: center;
+      background: linear-gradient(#bdc3c7, #2c3e50);
+      align-items: center;
+
+      @include md {
+        justify-content: flex-start;
+      }
+
+      .desing-inside {
+        width: 90%;
+        margin: 5% 3%;
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+
+        @include md {
+          width: 21%;
+          margin: 2%;
+        }
+
+        .cart-product {
+          width: 100%;
+          border-radius: 5px;
+          background-color: rgba(255, 255, 255, 0.5);
+          padding: 1rem;
+        }
+
+        .img-container {
+          width: 100%;
+          height: 200px;
+          border-radius: 5px;
+          background-color: #f9f9f9;
+          position: relative;
+          padding: 5%;
+
+          .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+
+            img {
+              width: 20px;
+              height: 20px;
+
+              @include md {
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .prod-details {
+          display: flex;
+          flex-direction: column;
+
+          .prod-details-child {
+            width: 100%;
+            padding: 1rem;
+
+            .name {
+              color: #373737;
+              font-weight: 600;
+              font-size: 20px;
+              margin: 0;
+              line-height: 1;
+              height: auto;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+
+              @include md {
+                font-size: 14px;
+              }
+            }
+
+            .price {
+              color: #373737;
+              margin: 10px 0;
+              font-size: 18px;
+              font-weight: 600;
+
+              @include md {
+                font-size: 13px;
+              }
+            }
+
+            .line {
+              height: 2px;
+              background-color: rgba(132, 130, 130, 0.452);
+              margin: 10px 0;
+              width: 100%;
+            }
+
+            .categories {
+              color: #373737;
+              margin: 10px 0;
+              font-size: 18px;
+              font-weight: bold;
+
+              @include md {
+                font-size: 12px;
+              }
+            }
+
+            .atb {
+              outline: 0;
+              border: 1px solid green;
+              padding: 10px;
+              width: 100%;
+              font-weight: 550;
+              cursor: pointer;
+              transition: 0.7s;
+
+              &:hover {
+                background-color: rgba(60, 230, 94, 0.765);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
-        

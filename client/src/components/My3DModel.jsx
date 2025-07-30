@@ -28,6 +28,16 @@ export default function My3DModel(props) {
 
             // Decay scroll boost smoothly
             scrollVelocity *= 0.9;
+
+            // Responsive scaling
+            const screenWidth = window.innerWidth;
+            if (screenWidth < 768) {
+                modelRef.current.scale.set(0.4, 0.4, 0.4);
+            } else if (screenWidth < 1024) {
+                modelRef.current.scale.set(0.75, 0.75, 0.75);
+            } else {
+                modelRef.current.scale.set(1, 1, 1);
+            }
         }
     });
 
